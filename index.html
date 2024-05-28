@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Email List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <h1>{{ title }}</h1>
+        <div v-if="emails.length === 10">
+            <ul v-for="(mail) in emails">
+                <li>{{ mail }}</li>
+            </ul>
+
+        </div>
+        <div v-else>Caricamento email in corso...</div>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- main js -->
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
