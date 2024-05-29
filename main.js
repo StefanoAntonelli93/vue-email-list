@@ -43,6 +43,7 @@
         },
         // lifecycle di vue della nostra 'app' nel momento created
         created() {
+            console.log('faccio chiamata api');
             for (let i = 0; i < 10; i++) {
                 this.apiCall();
             }
